@@ -1,0 +1,536 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+/* Gloable reules */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Lato';
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* Srart Header */
+.nav{
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    position: relative;
+}
+.nav .me{
+    display: none;
+}
+
+
+@media (max-width: 991px) {
+    .nav{
+        padding: 0px;
+        margin-right: 10px;
+        position: relative;
+    }
+    .nav .me{
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 30px;
+    }
+    .nav .me:hover{
+        cursor: pointer;
+    }
+    
+    
+}
+.nav ul{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.nav ul li a{
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    letter-spacing: 0.9px;
+    font-style: normal;
+    
+}
+
+@media (max-width: 991px) {
+    
+    .nav ul{
+        display: flex;
+        flex-direction: column;
+        background-color: #7e7e7e;
+        width: calc(100vw - 10px );
+        position: absolute;
+        right: 0px;
+        top: 30px;
+        align-items: flex-start;
+        padding: 20px 0 20px 20px;
+        gap: 50px;
+        display: none;
+        z-index: 9999;
+        
+        
+    }
+
+    .nav ul li.im{
+        display: none;
+    }
+    .nav ul li a{
+        color: aliceblue;
+        display: block;
+        padding: 10px 0;
+    }
+    .nav .me:hover  + ul{
+        display: block;
+
+        
+    }
+}
+
+/* End Header */
+
+/* Start Hero */
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.hero .text{
+    background-color: #F9EEEC;
+    width: 700px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 90px;
+}
+@media (max-width:768px) {
+    .hero img{
+        width: 100vw;
+    }
+    .hero .text{
+        padding: 10px;
+        width: 500px;
+        text-align: center;
+    }
+}
+.hero .text h1{
+    font-family: 'Ivy Journal';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 46px;
+    margin-bottom: 15px;
+}
+
+.hero .text p{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 30px;
+}
+@media (max-width:768px) {
+    .hero .text p{
+        line-height: 30px;
+    }
+}
+.hero .text a{
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+/* End Hero */
+
+/* Start BLog */
+.blog{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.blog .circle{
+    min-width:361px; 
+}
+.photo{
+    margin-right:100px ;
+}
+@media (max-width:991px) {
+    .blog .circle{
+        min-width:50px;
+        
+    }
+}
+.photo h2{
+    text-align: right;
+    margin-bottom: 50px;
+    font-family: 'Ivy Journal';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 46px;
+}
+
+.photo .divded{
+    display: flex;
+    gap: 10px;
+
+}
+.photo .divded div {
+    align-items: center;
+}
+.photo .divded div img{
+    width: 297px;
+}
+@media (max-width:676px) {
+    .photo{
+        margin-right:0px ;
+        
+    }
+    .photo .divded{
+        flex-direction: column;
+        
+    } 
+    .blog{
+        justify-content: center;
+        text-align: center;
+    }
+    .photo .divded div img{
+        width: 450px;
+    }
+    .blog .circle{
+        display: none;
+    }
+    .photo h2{
+        text-align: center;
+    }
+    
+    
+}
+
+.photo .divded div p{
+    font-family: 'Ivy Journal';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 35px;
+}
+/* End BLog */
+
+/* Start challange */
+.challange{
+    background-image: url(../img/challenge.png);
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+}
+.challange .text{
+    margin-left: 50px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 500px;
+}
+@media (max-width:768px) {
+    .challange .text{
+        width: 400px;
+    }
+}
+.challange .text h2{
+    font-family: 'Ivy Journal';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 46px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+
+}
+.challange .text p{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+
+
+}
+.challange .text button{
+    background: #F9F3DC;
+    border-radius: 5px;
+    width: 300px;
+    height: 50px;
+    border-color: transparent;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #000000;
+    cursor: pointer;
+}
+/* End challange */
+
+/* Start Gallery */
+.gallery{
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+@media (max-width:1200px) {
+    .gallery{
+        flex-wrap: wrap;
+    }
+    .gallery img{
+        min-width: 450px;
+    }
+}
+/* End Gallery */
+
+/* Start Title  */
+.title{
+    background-color: #F9EEEC;
+    height: 300px;
+    padding-left: 50px;
+}
+.title .text{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 500px;
+}
+@media (max-width:768px) {
+    .title .text{
+        width: 400px;
+    }
+}
+.title .text h2{
+    font-family: 'Ivy Journal';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 46px;
+    margin-bottom: 15px;
+}
+.title .text p{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+}
+/* End Title  */
+
+/* Start About */
+.about{
+    padding: 20px 100px;
+    display: flex;
+    align-items: center;
+}
+.about .right{
+    padding-left: 100px;
+}
+.about .right h2{
+    font-family: 'Ivy Journal';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 46px;
+    margin-bottom: 15px;
+}
+.about .right p{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 8px;
+    
+}
+.about .right button{
+    display: block;
+    width: 300px;
+    height: 50px;
+    background: rgb(227 237 239);
+    border-radius: 5px;
+    border-color: transparent;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    cursor: pointer;
+}
+@media (max-width: 1200px){
+    .about{
+        padding: 20px 50px;
+        flex-direction: column;
+    }
+    .about .right{
+        margin-top: 20px;
+        padding-left: 20px;
+
+    }
+    .about .right p{
+    text-align: center;
+    min-width: 300px;
+    }
+    .about .right button{
+        margin: auto;
+    }
+}
+@media (max-width: 768px){
+    .about img{
+        width: 300px;
+        }
+}
+/* End About */
+/*  Start Flower */
+.flower{ /*the problem is here in small screen size */
+    background-image: url(../img/floower.png);
+    min-height: 200px;
+    background-size: cover;
+    position: relative;
+    
+}
+.flower .couniter{
+    padding-right: 100px;
+    padding-left: 100px;
+    display: grid;
+    grid-template-columns:  repeat(auto-fill, minmax(200px, 1fr));
+    gap: 50px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+
+}
+
+.flower .couniter button{
+    width: 250px;
+    height: 50px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #F9F3DC;
+    border: none;
+}
+/*  End Flower */
+/* Start Footer */
+footer{
+    padding: 20px 100px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+}
+@media (max-width:991px) {
+    footer{
+        flex-wrap: wrap;
+    }
+}
+footer .third{
+    width: 50%;
+}
+footer .col h2{
+    font-family: 'Ivy Journal';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 35px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+footer .col a{
+    display: block;
+    width: fit-content;
+    margin-bottom: 10px;
+    color: #000000;
+    transition: 0.3s;
+}
+footer .col a:hover{
+    color: #0000009d;
+}
+footer .third {
+    width: 300px;
+}
+footer .third p {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+footer .third input{
+    display: block;
+    border-color: transparent;
+
+}
+
+footer .third input:focus{
+    outline: none;
+}
+footer .third input[type="email"]{
+    padding: 5px 20px;
+    width: 300px;
+    height: 50px;
+    border: 1px solid #E5E5E5;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+footer .third input[type="submit"]{
+    width: 300px;
+    height: 50px;
+    background: #F9EEEC;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* End Footer */
+
+/* Start CopyRight */
+.copyright {
+    padding: 10px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.copyright div{
+    display: flex;
+    gap: 20px;
+}
+.copyright div i{
+    color: #000000;
+}
+/* End CopyRight */
